@@ -4,12 +4,13 @@
 #
 Name     : mvn-jboss-logging
 Version  : 3.1.0.cr2
-Release  : 2
+Release  : 3
 URL      : http://repo1.maven.org/maven2/org/jboss/logging/jboss-logging/3.1.0.CR2/jboss-logging-3.1.0.CR2-sources.jar
 Source0  : http://repo1.maven.org/maven2/org/jboss/logging/jboss-logging/3.1.0.CR2/jboss-logging-3.1.0.CR2-sources.jar
 Source1  : http://repo1.maven.org/maven2/org/jboss/integration-platform/jboss-integration-platform-parent/6.0.0.CR8/jboss-integration-platform-parent-6.0.0.CR8.pom
 Source2  : http://repo1.maven.org/maven2/org/jboss/logging/jboss-logging/3.1.0.CR2/jboss-logging-3.1.0.CR2.jar
 Source3  : http://repo1.maven.org/maven2/org/jboss/logging/jboss-logging/3.1.0.CR2/jboss-logging-3.1.0.CR2.pom
+Source4  : https://repo1.maven.org/maven2/org/jboss/integration-platform/jboss-integration-platform-parent/6.0.0.CR28/jboss-integration-platform-parent-6.0.0.CR28.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : LGPL-2.1
@@ -55,12 +56,16 @@ cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/org/jboss/logging/jboss
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/jboss/logging/jboss-logging/3.1.0.CR2
 cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/org/jboss/logging/jboss-logging/3.1.0.CR2/jboss-logging-3.1.0.CR2.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/jboss/integration-platform/jboss-integration-platform-parent/6.0.0.CR28
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/org/jboss/integration-platform/jboss-integration-platform-parent/6.0.0.CR28/jboss-integration-platform-parent-6.0.0.CR28.pom
+
 
 %files
 %defattr(-,root,root,-)
 
 %files data
 %defattr(-,root,root,-)
+/usr/share/java/.m2/repository/org/jboss/integration-platform/jboss-integration-platform-parent/6.0.0.CR28/jboss-integration-platform-parent-6.0.0.CR28.pom
 /usr/share/java/.m2/repository/org/jboss/integration-platform/jboss-integration-platform-parent/6.0.0.CR8/jboss-integration-platform-parent-6.0.0.CR8.pom
 /usr/share/java/.m2/repository/org/jboss/logging/jboss-logging/3.1.0.CR2/jboss-logging-3.1.0.CR2-sources.jar
 /usr/share/java/.m2/repository/org/jboss/logging/jboss-logging/3.1.0.CR2/jboss-logging-3.1.0.CR2.jar
